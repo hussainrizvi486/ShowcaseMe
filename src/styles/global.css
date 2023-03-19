@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Righteous&family=Roboto:wght@300;400;900&display=swap');
+
+
+
+:root {
+    --color-1: #fef2f2;
+    --color-2: #523e3e;
+    --color-3: #171717a1;
+    --color-4: #322222;
+
+    --font-1: "Roboto", sans-serif;
+    --font-2: "Righteous", sans-serif;
+    --font-3: "Poppins", sans-serif;
+
+    --fw-1: 400;
+    --fw-2: 500;
+    --fw-3: 700;
+
+    --body-font: var(--font-1);
+    --bg-color: var(--color-1);
+
+    --max-width: 1440px;
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: var(--body-font);
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background: var(--bg-color);
+}
+
+.container-body-wrapper {
+    width: min(var(--max-width), 100% - 5%);
+    margin-inline: auto;
+}

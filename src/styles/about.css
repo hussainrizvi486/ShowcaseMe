@@ -1,0 +1,12 @@
+.about-section {
+    height: 100dvh;
+    background: #11ff001d;
+    padding: 6rem 0 0 4rem;
+    display: flex;
+}
+
+
+.about-section section {
+    height: 100%;
+    width: 50%;
+}
