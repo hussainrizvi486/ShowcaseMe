@@ -14,6 +14,81 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    cursor: pointer;
+}
+
+.section-home-pg-main-heading span {
+    animation-name: example;
+    animation-duration: 4s;
+    animation-name: rubberBand;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+
+.section-home-pg-main-heading span:hover {
+    animation-name: rubberBand;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+
+#a {
+    animation-name: rubberBand;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    animation-play-state: running;
+}
+
+@keyframes example {
+    0% {
+        color: red;
+    }
+
+    25% {
+        color: yellow;
+    }
+
+    50% {
+        color: blue;
+    }
+
+    100% {
+        color: green;
+    }
+}
+
+@keyframes rubberBand {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        transform: scale3d(.95, 1.05, 1);
+    }
+
+    75% {
+        transform: scale3d(1.05, .95, 1);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
 }
 
 .section-home-pg-main-heading {
@@ -90,12 +165,14 @@
 
 
 @media screen and (max-height: 850px) {
+
     .section-home-pg section:first-of-type {
-        gap: 1.rem;
+        gap: 1rem;
+        padding: 5rem 0 0 4rem;
     }
 
     .section-home-pg-main-heading {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
 
     .typewriterpara {
@@ -116,6 +193,10 @@
 
     .home-icons-col a svg {
         font-size: 1.5rem;
+    }
+
+    .section-home-pg section:last-of-type {
+        padding-top: 0;
     }
 
     .section-home-pg section:last-of-type img {
@@ -168,13 +249,6 @@
 
     .home-icons-col a svg {
         font-size: 1.2rem;
-    }
-}
-
-@media screen and (max-width: 1000px),
-screen and (max-height: 700px) {
-    .section-home-pg section:last-of-type {
-        padding-top: 1rem;
     }
 }
 

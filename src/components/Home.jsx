@@ -10,10 +10,14 @@ const Home = () => {
             <section>
 
                 <div>
-                    <h1 className='section-home-pg-main-heading'>Hey' Here <br />
+                    <h1 className='section-home-pg-main-heading'>
+                        Hey' Here
+                        <br />
                         Write Something
                     </h1>
                 </div>
+
+
 
                 <Typewriter options={{
                     strings: ["A Developer", "A Designer"],
