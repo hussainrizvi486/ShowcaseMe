@@ -28,6 +28,7 @@
 *::after {
     margin: 0;
     padding: 0;
+    font: inherit;
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: var(--body-font);
@@ -59,4 +60,8 @@ body {
 .container-body-wrapper {
     width: min(var(--max-width), 100% - 5%);
     margin-inline: auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

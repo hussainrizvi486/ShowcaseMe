@@ -17,79 +17,6 @@
     cursor: pointer;
 }
 
-.section-home-pg-main-heading span {
-    animation-name: example;
-    animation-duration: 4s;
-    animation-name: rubberBand;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-play-state: paused;
-}
-
-
-.section-home-pg-main-heading span:hover {
-    animation-name: rubberBand;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
-}
-
-
-#a {
-    animation-name: rubberBand;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-play-state: paused;
-    animation-play-state: running;
-}
-
-@keyframes example {
-    0% {
-        color: red;
-    }
-
-    25% {
-        color: yellow;
-    }
-
-    50% {
-        color: blue;
-    }
-
-    100% {
-        color: green;
-    }
-}
-
-@keyframes rubberBand {
-    from {
-        transform: scale3d(1, 1, 1);
-    }
-
-    30% {
-        transform: scale3d(1.25, 0.75, 1);
-    }
-
-    40% {
-        transform: scale3d(0.75, 1.25, 1);
-    }
-
-    50% {
-        transform: scale3d(1.15, 0.85, 1);
-    }
-
-    65% {
-        transform: scale3d(.95, 1.05, 1);
-    }
-
-    75% {
-        transform: scale3d(1.05, .95, 1);
-    }
-
-    to {
-        transform: scale3d(1, 1, 1);
-    }
-}
 
 .section-home-pg-main-heading {
     font-size: 2.8rem;
@@ -113,8 +40,16 @@
 }
 
 .section-home-pg section:last-of-type img {
-    width: 40vmax;
+    width: 35vmax;
     object-fit: contain;
+    transition: .5s all;
+}
+
+
+.section-home-pg section:last-of-type img:hover {
+    transform: scale(1.01);
+    transform: rotateZ(5deg);
+    cursor: pointer;
 }
 
 .section-home-pg .btn-group {
@@ -124,15 +59,14 @@
 
 .section-home-pg .btn-group button {
     background-color: #fef2f2;
-    border: 1px solid hsla(0, 0%, 9%, .596);
+    border: 1px solid #523e3e;
     border-radius: 3px;
     color: #523e3e;
     cursor: pointer;
-    font-family: Poppins, sans-serif;
     font-size: small;
     font-weight: 500;
     letter-spacing: 1px;
-    padding: 0.4rem 1.8rem;
+    padding: 0.5rem 1.8rem;
     transition: all 400ms;
 }
 
@@ -162,10 +96,24 @@
 }
 
 
+#home-section-down-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    transform: translateX(-50%);
+    font-size: 2.8rem;
+    color: #523e3e;
+    animation: upToDowm 1s linear infinite alternate;
+    cursor: pointer;
+}
 
+@keyframes upToDowm {
+    to {
+        transform: translate(-50%, -10px);
+    }
+}
 
 @media screen and (max-height: 850px) {
-
     .section-home-pg section:first-of-type {
         gap: 1rem;
         padding: 5rem 0 0 4rem;
@@ -201,6 +149,11 @@
 
     .section-home-pg section:last-of-type img {
         width: 35vmax;
+    }
+
+    #home-section-down-arrow {
+        bottom: 0;
+        font-size: 2rem;
     }
 }
 
@@ -242,13 +195,13 @@
     }
 
     .home-icons-col {
-        gap: 1.5rem;
+        gap: 2rem;
         bottom: 4%;
     }
 
 
     .home-icons-col a svg {
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
 }
 
@@ -262,7 +215,7 @@
 
     .section-home-pg section:first-of-type {
         width: 100%;
-        padding: 1rem 0 0 0;
+        padding: 0;
         align-items: center;
         text-align: center;
     }
@@ -275,6 +228,14 @@
         width: 100%;
         padding: 0;
         justify-content: center;
+    }
+
+    .home-icons-col {
+        gap: 2rem;
+    }
+
+    .home-icons-col a svg {
+        font-size: 1.5rem;
     }
 
 }

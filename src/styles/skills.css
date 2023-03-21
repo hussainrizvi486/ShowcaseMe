@@ -1,0 +1,77 @@
+.section-skills-pg {
+    height: 100vh;
+    display: flex;
+}
+
+.section-skills-pg section {
+    height: 100%;
+    width: 50%;
+}
+
+.section-skills-pg section:first-of-type {
+    padding: 8rem 0 0 4rem;
+
+}
+
+.about-skill-container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.about-skill-container h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-2);
+    transition: all .15s;
+}
+
+.section-skills-pg section:last-of-type {
+    padding: 11rem 0 0;
+}
+
+.skills-boxs-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.skill-box {
+    width: 100%;
+    padding: 1rem;
+    background-color: #dbb89f59;
+}
+
+.skill-box h2 {
+    margin-block: 0.4rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #523e3e;
+}
+
+.skill-box p {
+    font-family: 'Poppins', sans-serif;
+    color: #523e3e;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .section-skills-pg {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-skills-pg section:first-of-type {
+        padding-inline: 0;
+    }
+
+    .section-skills-pg section {
+        width: 100%;
+    }
+
+    .about-skill-container {
+        width: 100%;
+    }
+}

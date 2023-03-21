@@ -1,6 +1,7 @@
 import React from 'react'
 import Typewriter from "typewriter-effect";
 import '../styles/Home.css'
+import { BsChevronDown } from "react-icons/bs";
 
 import { FiFacebook, FiTwitter, FiLinkedin, FiGithub } from 'react-icons/fi'
 
@@ -49,7 +50,7 @@ const Home = () => {
                 <img src="https://hussain-rizvi.netlify.app/static/media/avatar.2ca2657d48c5ca95143f.png" alt="" loading='lazy0' />
             </section>
 
-
+            <BsChevronDown id='home-section-down-arrow'/>
 
         </main>
     )
